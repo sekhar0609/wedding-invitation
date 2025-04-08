@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Open Sans', sans-serif;
-      background-image: url("WhatsApp Image 2025-04-08 at 20.15.11_0d5ccd32.jpg"); /* ✅ Replace with your actual image path */
+      background-image: url("WhatsApp Image 2025-04-08 at 20.15.11_0d5ccd32.jpg");
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -23,24 +23,26 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center; /* ✅ Center horizontally */
       padding: 30px;
+      text-align: center;
     }
 
     .content {
-  display: flex;
-  justify-content: center; /* optional: tighter centering */
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 50px; /* ← reduced gap */
-  margin-bottom: 40px;
-}
-
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      max-width: 800px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     .text-section {
-  max-width: 500px;
-  margin-left: 100px; /* Slight shift to the right */
-}
-
+      max-width: 600px;
+      padding: 10px;
+    }
 
     h1 {
       font-family: 'Great Vibes', cursive;
@@ -59,10 +61,10 @@
       font-size: 1.2em;
     }
 
-    .video-container video {
+    .video-container iframe {
       width: 100%;
-      max-width: 300px;
-      margin-left: 10px;
+      max-width: 320px;
+      height: 580px;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
     }
@@ -86,9 +88,34 @@
     }
 
     .location {
-  text-align: center;
-  margin-top: -70px; /* move it upward */
-}
+      margin-top: 10px;
+    }
+
+    /* ✅ Mobile responsive tweaks */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.4em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      .btn {
+        width: 90%;
+        font-size: 1em;
+        padding: 15px;
+      }
+
+      .video-container iframe {
+        max-width: 90%;
+        height: auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -98,25 +125,16 @@
         <h1>You’re Invited!</h1>
         <p>To the Wedding of</p>
         <h2>𝖱𝖺𝗆𝖾𝗌𝗁 𝖢𝗁𝖺𝗇𝖽𝗋𝖺 & 𝖲𝗈𝗎𝗇𝖽𝖺𝗋𝗒𝖺</h2>
-        <h2>   𝖱𝖺𝗏𝗂 𝖳𝖾𝗃𝖺 & 𝖬𝗈𝗎𝗇𝗂𝗄𝖺   </h2>
+        <h2>𝖱𝖺𝗏𝗂 𝖳𝖾𝗃𝖺 & 𝖬𝗈𝗎𝗇𝗂𝗄𝖺</h2>
         <p>May 07, 2025</p>
       </div>
 
-      <!-- Embedded Google Drive Video using iframe -->
       <div class="video-container">
-        <div class="video-container">
-          <iframe 
-            src="https://res.cloudinary.com/darekrw2y/video/upload/v1744131106/lv_0_20250408213855_b0stt6.mp4" 
-            width="320" 
-            height="580" 
-            allow="autoplay" 
-            style="border-radius: 15px; box-shadow: 0 0 20px rgba(255,255,255,0.3);">
-          </iframe>
-        </div>
-        
-      </div>
-      
-
+        <iframe 
+          src="https://res.cloudinary.com/darekrw2y/video/upload/v1744131106/lv_0_20250408213855_b0stt6.mp4" 
+          allow="autoplay" 
+          allowfullscreen>
+        </iframe>
       </div>
     </div>
 
